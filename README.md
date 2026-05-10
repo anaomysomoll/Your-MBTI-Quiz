@@ -8,3 +8,7 @@ This project will focus on my knowledge of Python and to provide users with a fu
 learning about their personality type. I would like to put my knowledge of Python programming
 into a real project that I might encounter real problems in the real world. What I have learnt so
 far such as control flows, arithmetic, etc. will be applied in this project.
+
+Find my bot here: https://t.me/mbti_test_ai_bot
+
+It might/might not be expired by June 10th, 2026
