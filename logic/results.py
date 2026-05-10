@@ -10,597 +10,598 @@ def calculate_result(scores):
 
 def get_description(mbti_type):
     descriptions = {
-#In string, when want to use bold can use \033[1m...
+#In Telegram we use <b>...</b> for bold instead of \033[1m which only works in terminal
+
         "ISTJ": """ISTJs are practical, organized, and highly dependable individuals.
-    They value structure and tradition, preferring clear rules and stability.
+They value structure and tradition, preferring clear rules and stability.
 
-    \033[1mStrengths\033[0m
-    • Reliable and consistent
-    • Strong sense of duty
-    • Excellent attention to detail
-    • Logical decision-making
-    • Organized and disciplined
+<b>Strengths</b>
+• Reliable and consistent
+• Strong sense of duty
+• Excellent attention to detail
+• Logical decision-making
+• Organized and disciplined
 
-    \033[1mWeaknesses\033[0m
-    • Can be stubborn
-    • Difficulty expressing emotions
-    • Very judgmental of others
-    • Often blames themselves
+<b>Weaknesses</b>
+• Can be stubborn
+• Difficulty expressing emotions
+• Very judgmental of others
+• Often blames themselves
 
-    \033[1mCommon Careers\033[0m
-    • Accountant
-    • Military officer
-    • Auditor
-    • Police officer
-    • Operations manager
-    • Data analyst
+<b>Common Careers</b>
+• Accountant
+• Military officer
+• Auditor
+• Police officer
+• Operations manager
+• Data analyst
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Hermione Granger (Harry Potter)
-    • Captain America
-    • Queen Elizabeth II
-    • George Washington
-    • Mike Ehrmantraut (Breaking Bad)
+<b>Fictional Characters/Famous People</b>
+• Hermione Granger (Harry Potter)
+• Captain America
+• Queen Elizabeth II
+• George Washington
+• Mike Ehrmantraut (Breaking Bad)
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ISFJ": """ISFJs are warm, loyal, and caring individuals who prioritize helping others.
-    They value harmony, stability, and responsibility.
+They value harmony, stability, and responsibility.
 
-    \033[1mStrengths\033[0m
-    • Compassionate
-    • Loyal and dependable
-    • Patient and supportive
-    • Hardworking
-    • Detail-oriented
+<b>Strengths</b>
+• Compassionate
+• Loyal and dependable
+• Patient and supportive
+• Hardworking
+• Detail-oriented
 
-    \033[1mWeaknesses\033[0m
-    • Sensitive to criticism
-    • Difficulty setting boundaries
-    • Can suppress emotions
-    • Avoids conflict
+<b>Weaknesses</b>
+• Sensitive to criticism
+• Difficulty setting boundaries
+• Can suppress emotions
+• Avoids conflict
 
-    \033[1mCommon Careers\033[0m
-    • Nurse
-    • Teacher
-    • Counselor
-    • Social worker
-    • HR specialist
-    • Healthcare administrator
+<b>Common Careers</b>
+• Nurse
+• Teacher
+• Counselor
+• Social worker
+• HR specialist
+• Healthcare administrator
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Samwise Gamgee
-    • Mother Teresa
-    • Pam Beesly
-    • Kate Middleton
-    • Steve Rogers
+<b>Fictional Characters/Famous People</b>
+• Samwise Gamgee
+• Mother Teresa
+• Pam Beesly
+• Kate Middleton
+• Steve Rogers
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "INFJ": """INFJs are insightful, idealistic, and deeply thoughtful individuals.
-    They seek meaning, purpose, and emotional connection.
+They seek meaning, purpose, and emotional connection.
 
-    \033[1mStrengths\033[0m
-    • Empathetic
-    • Visionary
-    • Creative
-    • Determined
-    • Reflective
+<b>Strengths</b>
+• Empathetic
+• Visionary
+• Creative
+• Determined
+• Reflective
 
-    \033[1mWeaknesses\033[0m
-    • Perfectionistic
-    • Emotionally overwhelmed easily
-    • Very private
-    • Burns out from helping others
+<b>Weaknesses</b>
+• Perfectionistic
+• Emotionally overwhelmed easily
+• Very private
+• Burns out from helping others
 
-    \033[1mCommon Careers\033[0m
-    • Psychologist
-    • Writer
-    • Counselor
-    • Professor
-    • Human rights advocate
-    • UX researcher
+<b>Common Careers</b>
+• Psychologist
+• Writer
+• Counselor
+• Professor
+• Human rights advocate
+• UX researcher
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Martin Luther King Jr.
-    • Aragorn
-    • Lisa Simpson
-    • Nelson Mandela
-    • Atticus Finch
+<b>Fictional Characters/Famous People</b>
+• Martin Luther King Jr.
+• Aragorn
+• Lisa Simpson
+• Nelson Mandela
+• Atticus Finch
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "INTJ": """INTJs are strategic, independent thinkers who enjoy mastering systems.
-    They are analytical, future-focused, and highly goal-oriented.
+They are analytical, future-focused, and highly goal-oriented.
 
-    \033[1mStrengths\033[0m
-    • Strategic thinking
-    • Independent
-    • Analytical
-    • Innovative
-    • Goal-focused
+<b>Strengths</b>
+• Strategic thinking
+• Independent
+• Analytical
+• Innovative
+• Goal-focused
 
-    \033[1mWeaknesses\033[0m
-    • Can appear arrogant
-    • Emotionally reserved
-    • Perfectionistic
-    • Impatient with incompetence
+<b>Weaknesses</b>
+• Can appear arrogant
+• Emotionally reserved
+• Perfectionistic
+• Impatient with incompetence
 
-    \033[1mCommon Careers\033[0m
-    • Scientist
-    • Software engineer
-    • Architect
-    • Financial analyst
-    • Researcher
-    • Strategist
+<b>Common Careers</b>
+• Scientist
+• Software engineer
+• Architect
+• Financial analyst
+• Researcher
+• Strategist
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Elon Musk
-    • Gandalf
-    • Nikola Tesla
-    • Walter White
-    • Wednesday Addams
+<b>Fictional Characters/Famous People</b>
+• Elon Musk
+• Gandalf
+• Nikola Tesla
+• Walter White
+• Wednesday Addams
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ISTP": """ISTPs are adaptable and practical problem-solvers who enjoy understanding how things work.
-    They are calm under pressure and action-oriented.
+They are calm under pressure and action-oriented.
 
-    \033[1mStrengths\033[0m
-    • Independent
-    • Practical
-    • Adaptable
-    • Calm in emergencies
-    • Mechanically skilled
+<b>Strengths</b>
+• Independent
+• Practical
+• Adaptable
+• Calm in emergencies
+• Mechanically skilled
 
-    \033[1mWeaknesses\033[0m
-    • Emotionally detached
-    • Easily bored
-    • Risk-taking tendencies
-    • Avoids commitment
+<b>Weaknesses</b>
+• Emotionally detached
+• Easily bored
+• Risk-taking tendencies
+• Avoids commitment
 
-    \033[1mCommon Careers\033[0m
-    • Engineer
-    • Mechanic
-    • Pilot
-    • Electrician
-    • Firefighter
-    • Forensic technician
+<b>Common Careers</b>
+• Engineer
+• Mechanic
+• Pilot
+• Electrician
+• Firefighter
+• Forensic technician
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Bruce Lee
-    • James Bond
-    • Black Widow
-    • Levi Ackerman
-    • Clint Eastwood
+<b>Fictional Characters/Famous People</b>
+• Bruce Lee
+• James Bond
+• Black Widow
+• Levi Ackerman
+• Clint Eastwood
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ISFP": """ISFPs are artistic, gentle, and emotionally aware individuals.
-    They value freedom, creativity, and authenticity.
+They value freedom, creativity, and authenticity.
 
-    \033[1mStrengths\033[0m
-    • Creative
-    • Compassionate
-    • Flexible
-    • Observant
-    • Easygoing
+<b>Strengths</b>
+• Creative
+• Compassionate
+• Flexible
+• Observant
+• Easygoing
 
-    \033[1mWeaknesses\033[0m
-    • Sensitive to criticism
-    • Avoids planning
-    • Unpredictable
-    • Dislikes conflict
+<b>Weaknesses</b>
+• Sensitive to criticism
+• Avoids planning
+• Unpredictable
+• Dislikes conflict
 
-    \033[1mCommon Careers\033[0m
-    • Artist
-    • Musician
-    • Fashion designer
-    • Photographer
-    • Veterinarian
-    • Graphic designer
+<b>Common Careers</b>
+• Artist
+• Musician
+• Fashion designer
+• Photographer
+• Veterinarian
+• Graphic designer
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Harry Potter
-    • Frodo Baggins
-    • Zendaya
-    • Michael Jackson
-    • Lana Del Rey
+<b>Fictional Characters/Famous People</b>
+• Harry Potter
+• Frodo Baggins
+• Zendaya
+• Michael Jackson
+• Lana Del Rey
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "INFP": """INFPs are imaginative, idealistic, and emotionally deep individuals.
-    They value authenticity, creativity, and personal meaning.
+They value authenticity, creativity, and personal meaning.
 
-    \033[1mStrengths\033[0m
-    • Creative
-    • Empathetic
-    • Open-minded
-    • Passionate
-    • Imaginative
+<b>Strengths</b>
+• Creative
+• Empathetic
+• Open-minded
+• Passionate
+• Imaginative
 
-    \033[1mWeaknesses\033[0m
-    • Overly idealistic
-    • Sensitive to criticism
-    • Procrastinates
-    • Emotionally intense
+<b>Weaknesses</b>
+• Overly idealistic
+• Sensitive to criticism
+• Procrastinates
+• Emotionally intense
 
-    \033[1mCommon Careers\033[0m
-    • Author
-    • Therapist
-    • Animator
-    • Musician
-    • Screenwriter
-    • Nonprofit worker
+<b>Common Careers</b>
+• Author
+• Therapist
+• Animator
+• Musician
+• Screenwriter
+• Nonprofit worker
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Luna Lovegood
-    • William Shakespeare
-    • Johnny Depp
-    • Anne Shirley
-    • Peter Parker
+<b>Fictional Characters/Famous People</b>
+• Luna Lovegood
+• William Shakespeare
+• Johnny Depp
+• Anne Shirley
+• Peter Parker
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "INTP": """INTPs are analytical and curious thinkers who enjoy theories and abstract concepts.
-    They value logic, innovation, and intellectual exploration.
+They value logic, innovation, and intellectual exploration.
 
-    \033[1mStrengths\033[0m
-    • Logical
-    • Curious
-    • Innovative
-    • Independent-minded
-    • Open to possibilities
+<b>Strengths</b>
+• Logical
+• Curious
+• Innovative
+• Independent-minded
+• Open to possibilities
 
-    \033[1mWeaknesses\033[0m
-    • Socially detached
-    • Overthinks
-    • Neglects practical matters
-    • Difficulty expressing emotions
+<b>Weaknesses</b>
+• Socially detached
+• Overthinks
+• Neglects practical matters
+• Difficulty expressing emotions
 
-    \033[1mCommon Careers\033[0m
-    • Programmer
-    • Mathematician
-    • Philosopher
-    • Physicist
-    • Systems analyst
-    • AI researcher
+<b>Common Careers</b>
+• Programmer
+• Mathematician
+• Philosopher
+• Physicist
+• Systems analyst
+• AI researcher
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Albert Einstein
-    • Sherlock Holmes
-    • Bill Gates
-    • L (Death Note)
-    • Neo (The Matrix)
+<b>Fictional Characters/Famous People</b>
+• Albert Einstein
+• Sherlock Holmes
+• Bill Gates
+• L (Death Note)
+• Neo (The Matrix)
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ESTP": """ESTPs are energetic and action-oriented individuals who thrive in fast-paced environments.
-    They enjoy challenge, excitement, and risk-taking.
+They enjoy challenge, excitement, and risk-taking.
 
-    \033[1mStrengths\033[0m
-    • Bold
-    • Confident
-    • Adaptable
-    • Persuasive
-    • Practical
+<b>Strengths</b>
+• Bold
+• Confident
+• Adaptable
+• Persuasive
+• Practical
 
-    \033[1mWeaknesses\033[0m
-    • Impulsive
-    • Easily bored
-    • Risk-taking
-    • Ignores emotional consequences
+<b>Weaknesses</b>
+• Impulsive
+• Easily bored
+• Risk-taking
+• Ignores emotional consequences
 
-    \033[1mCommon Careers\033[0m
-    • Entrepreneur
-    • Athlete
-    • Salesperson
-    • Emergency responder
-    • Stock trader
-    • Marketing specialist
+<b>Common Careers</b>
+• Entrepreneur
+• Athlete
+• Salesperson
+• Emergency responder
+• Stock trader
+• Marketing specialist
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Tony Stark
-    • Han Solo
-    • Madonna
-    • Eddie Murphy
-    • Jordan Belfort
+<b>Fictional Characters/Famous People</b>
+• Tony Stark
+• Han Solo
+• Madonna
+• Eddie Murphy
+• Jordan Belfort
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ESFP": """ESFPs are social, enthusiastic, and spontaneous individuals.
-    They enjoy entertaining others and living in the moment.
+They enjoy entertaining others and living in the moment.
 
-    \033[1mStrengths\033[0m
-    • Charismatic
-    • Optimistic
-    • Fun-loving
-    • Expressive
-    • Sociable
+<b>Strengths</b>
+• Charismatic
+• Optimistic
+• Fun-loving
+• Expressive
+• Sociable
 
-    \033[1mWeaknesses\033[0m
-    • Easily distracted
-    • Dislikes routine
-    • Impulsive
-    • Avoids difficult conversations
+<b>Weaknesses</b>
+• Easily distracted
+• Dislikes routine
+• Impulsive
+• Avoids difficult conversations
 
-    \033[1mCommon Careers\033[0m
-    • Actor
-    • Performer
-    • Event planner
-    • Influencer
-    • Public relations specialist
-    • Hospitality manager
+<b>Common Careers</b>
+• Actor
+• Performer
+• Event planner
+• Influencer
+• Public relations specialist
+• Hospitality manager
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Elvis Presley
-    • Miley Cyrus
-    • Rapunzel
-    • Joey Tribbiani
-    • Harley Quinn
+<b>Fictional Characters/Famous People</b>
+• Elvis Presley
+• Miley Cyrus
+• Rapunzel
+• Joey Tribbiani
+• Harley Quinn
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ENFP": """ENFPs are energetic, imaginative, and people-oriented individuals.
-    They enjoy exploring possibilities and inspiring others.
+They enjoy exploring possibilities and inspiring others.
 
-    \033[1mStrengths\033[0m
-    • Enthusiastic
-    • Creative
-    • Charismatic
-    • Curious
-    • Emotionally intelligent
+<b>Strengths</b>
+• Enthusiastic
+• Creative
+• Charismatic
+• Curious
+• Emotionally intelligent
 
-    \033[1mWeaknesses\033[0m
-    • Difficulty focusing
-    • Easily overwhelmed
-    • Overcommits
-    • Sensitive to criticism
+<b>Weaknesses</b>
+• Difficulty focusing
+• Easily overwhelmed
+• Overcommits
+• Sensitive to criticism
 
-    \033[1mCommon Careers\033[0m
-    • Journalist
-    • Entrepreneur
-    • Counselor
-    • Actor
-    • Creative director
-    • Marketing strategist
+<b>Common Careers</b>
+• Journalist
+• Entrepreneur
+• Counselor
+• Actor
+• Creative director
+• Marketing strategist
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Robin Williams
-    • Naruto Uzumaki
-    • Willy Wonka
-    • Robert Downey Jr.
-    • Phil Dunphy
+<b>Fictional Characters/Famous People</b>
+• Robin Williams
+• Naruto Uzumaki
+• Willy Wonka
+• Robert Downey Jr.
+• Phil Dunphy
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ENTP": """ENTPs are inventive and intellectually curious individuals.
-    They enjoy debating ideas and exploring innovation.
+They enjoy debating ideas and exploring innovation.
 
-    \033[1mStrengths\033[0m
-    • Quick-thinking
-    • Innovative
-    • Charismatic
-    • Adaptable
-    • Strong problem-solving skills
+<b>Strengths</b>
+• Quick-thinking
+• Innovative
+• Charismatic
+• Adaptable
+• Strong problem-solving skills
 
-    \033[1mWeaknesses\033[0m
-    • Argumentative
-    • Easily distracted
-    • Neglects details
-    • Dislikes routine
+<b>Weaknesses</b>
+• Argumentative
+• Easily distracted
+• Neglects details
+• Dislikes routine
 
-    \033[1mCommon Careers\033[0m
-    • Lawyer
-    • Startup founder
-    • Inventor
-    • Consultant
-    • Creative strategist
-    • Political analyst
+<b>Common Careers</b>
+• Lawyer
+• Startup founder
+• Inventor
+• Consultant
+• Creative strategist
+• Political analyst
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Tyrion Lannister
-    • Mark Twain
-    • Deadpool
-    • Tony Stark
-    • The Joker
+<b>Fictional Characters/Famous People</b>
+• Tyrion Lannister
+• Mark Twain
+• Deadpool
+• Tony Stark
+• The Joker
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ESTJ": """ESTJs are structured, efficient, and leadership-oriented individuals.
-    They value order, responsibility, and tradition.
+They value order, responsibility, and tradition.
 
-    \033[1mStrengths\033[0m
-    • Strong leadership
-    • Organized
-    • Decisive
-    • Responsible
-    • Efficient
+<b>Strengths</b>
+• Strong leadership
+• Organized
+• Decisive
+• Responsible
+• Efficient
 
-    \033[1mWeaknesses\033[0m
-    • Controlling
-    • Resistant to new ideas
-    • Harsh communication
-    • Impatient
+<b>Weaknesses</b>
+• Controlling
+• Resistant to new ideas
+• Harsh communication
+• Impatient
 
-    \033[1mCommon Careers\033[0m
-    • Business manager
-    • Judge
-    • Military leader
-    • Project manager
-    • Police supervisor
-    • Administrator
+<b>Common Careers</b>
+• Business manager
+• Judge
+• Military leader
+• Project manager
+• Police supervisor
+• Administrator
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Dwight Schrute
-    • Judge Judy
-    • Princess Leia
-    • Franklin D. Roosevelt
-    • Miranda Priestly
+<b>Fictional Characters/Famous People</b>
+• Dwight Schrute
+• Judge Judy
+• Princess Leia
+• Franklin D. Roosevelt
+• Miranda Priestly
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ESFJ": """ESFJs are sociable, caring, and community-oriented individuals.
-    They enjoy helping others and maintaining harmony.
+They enjoy helping others and maintaining harmony.
 
-    \033[1mStrengths\033[0m
-    • Supportive
-    • Loyal
-    • Organized
-    • Reliable
-    • Strong interpersonal skills
+<b>Strengths</b>
+• Supportive
+• Loyal
+• Organized
+• Reliable
+• Strong interpersonal skills
 
-    \033[1mWeaknesses\033[0m
-    • Seeks approval too much
-    • Sensitive to criticism
-    • Difficulty adapting to change
-    • Can become controlling
+<b>Weaknesses</b>
+• Seeks approval too much
+• Sensitive to criticism
+• Difficulty adapting to change
+• Can become controlling
 
-    \033[1mCommon Careers\033[0m
-    • Teacher
-    • Nurse
-    • Event coordinator
-    • Human resources specialist
-    • Customer relations manager
-    • Community organizer
+<b>Common Careers</b>
+• Teacher
+• Nurse
+• Event coordinator
+• Human resources specialist
+• Customer relations manager
+• Community organizer
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Monica Geller
-    • Taylor Swift
-    • Cinderella
-    • Molly Weasley
-    • Jennifer Garner
+<b>Fictional Characters/Famous People</b>
+• Monica Geller
+• Taylor Swift
+• Cinderella
+• Molly Weasley
+• Jennifer Garner
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ENFJ": """ENFJs are charismatic and empathetic leaders who enjoy helping others grow.
-    They are inspirational, organized, and emotionally aware.
+They are inspirational, organized, and emotionally aware.
 
-    \033[1mStrengths\033[0m
-    • Inspirational
-    • Empathetic
-    • Organized
-    • Loyal
-    • Strong communication skills
+<b>Strengths</b>
+• Inspirational
+• Empathetic
+• Organized
+• Loyal
+• Strong communication skills
 
-    \033[1mWeaknesses\033[0m
-    • Overextends themselves
-    • Sensitive to conflict
-    • Overly idealistic
-    • Needs validation
+<b>Weaknesses</b>
+• Overextends themselves
+• Sensitive to conflict
+• Overly idealistic
+• Needs validation
 
-    \033[1mCommon Careers\033[0m
-    • Teacher
-    • Coach
-    • Psychologist
-    • Public speaker
-    • Politician
-    • Nonprofit leader
+<b>Common Careers</b>
+• Teacher
+• Coach
+• Psychologist
+• Public speaker
+• Politician
+• Nonprofit leader
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Oprah Winfrey
-    • Barack Obama
-    • Mufasa
-    • Ted Lasso
-    • Daenerys Targaryen
+<b>Fictional Characters/Famous People</b>
+• Oprah Winfrey
+• Barack Obama
+• Mufasa
+• Ted Lasso
+• Daenerys Targaryen
 
-    \033[1mSources\033[0m
-    • Gifts Differing: Understanding Personality Type
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """,
+<b>Sources</b>
+• Gifts Differing: Understanding Personality Type
+• Myers &amp; Briggs Foundation
+• 16Personalities
+""",
 
         "ENTJ": """ENTJs are ambitious and strategic individuals who naturally take leadership roles.
-    They are highly driven and focused on long-term goals.
+They are highly driven and focused on long-term goals.
 
-    \033[1mStrengths\033[0m
-    • Strong leadership
-    • Strategic mindset
-    • Confident
-    • Efficient organizer
-    • Goal-focused
+<b>Strengths</b>
+• Strong leadership
+• Strategic mindset
+• Confident
+• Efficient organizer
+• Goal-focused
 
-    \033[1mWeaknesses\033[0m
-    • Intimidating
-    • Impatient with emotions
-    • Workaholic tendencies
-    • Overly competitive
+<b>Weaknesses</b>
+• Intimidating
+• Impatient with emotions
+• Workaholic tendencies
+• Overly competitive
 
-    \033[1mCommon Careers\033[0m
-    • CEO
-    • Attorney
-    • Entrepreneur
-    • Executive consultant
-    • Engineering manager
-    • Investment banker
+<b>Common Careers</b>
+• CEO
+• Attorney
+• Entrepreneur
+• Executive consultant
+• Engineering manager
+• Investment banker
 
-    \033[1mFictional Characters/Famous People\033[0m
-    • Steve Jobs
-    • Gordon Ramsay
-    • Napoleon Bonaparte
-    • Light Yagami
-    • Miranda Bailey
+<b>Fictional Characters/Famous People</b>
+• Steve Jobs
+• Gordon Ramsay
+• Napoleon Bonaparte
+• Light Yagami
+• Miranda Bailey
 
-    \033[1mSources\033[0m
-    • Please Understand Me II
-    • Myers & Briggs Foundation
-    • 16Personalities
-    """
+<b>Sources</b>
+• Please Understand Me II
+• Myers &amp; Briggs Foundation
+• 16Personalities
+"""
     }
     return descriptions.get(mbti_type, "Unique personality type!")
