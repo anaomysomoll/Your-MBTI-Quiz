@@ -8,7 +8,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 #specific classes from telegram bot library
 from bot.handlers import start, button_handler
 #functions start and button_handler from handlers.py
-from config import BOT_TOKEN
+import os
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
 #from config.py the hidden BOT_TOKEN
 
 async def post_init(app): #Defining an asynchronous function (a function that lets other things run while waiting, non blocking)
